@@ -12,8 +12,12 @@ const Home = ()=>{
 
 
   useEffect(()=>{
+
+    const baseUrl = process.env.NODE_ENV === 'production'
+    ? 'https://share-space-react-sba-1.onrender.com/api/products/'
+    : 'http://localhost:3000/api/products/';
     const fetchProducts = async()=>{
-    const response = await fetch('http://localhost:3000/api/products/',{
+    const response = await fetch(baseUrl,{
       headers:{
         'Authorization': `Bearer ${user.token}`
       }
