@@ -1,3 +1,4 @@
+![Screenshot 2024-05-24 140907](https://github.com/Haregewoyn-Soramo/Share-Space-React-SBA/assets/160265613/bf4bd9ea-2636-4702-8d52-ee96fafecf77)
 # Share Scape
 
 Share Scape is a social media platform that provides users with the ability to discover, share, and organize images and content in a visually appealing way. Similar to platforms like Pinterest, Share Scape allows users to create collections, follow other users, and explore a wide range of content shared by the community.
