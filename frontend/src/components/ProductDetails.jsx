@@ -6,19 +6,20 @@ import { UseAuthContext } from "../hooks/UseAuthContext";
 
 const ProductDetails = ({ products }) => {
   const {user} = UseAuthContext()
+  
   if(!user){
     return
   }
-  const { dispatch } = UseProductsContext();
+  
 
   const handleClick = async (_id) => {
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
-        const baseUrl = process.env.NODE_ENV === 'production'
-        ? 'https://share-space-react-sba-1.onrender.com/api/products/'
-        : 'http://localhost:3000/api/products/';
+        // const baseUrl = process.env.NODE_ENV === 'production'
+        // ? 'https://share-space-react-sba-1.onrender.com/api/products/'
+        // : ;
         
-        const response = await fetch(`${baseUrl}${_id}` + _id, {
+        const response = await fetch('http://localhost:3000/api/products/' + _id ,{
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${user.token}`

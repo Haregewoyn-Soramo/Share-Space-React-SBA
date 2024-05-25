@@ -15,11 +15,11 @@ export const UseLogin = ()=>{
     }
     setError(null)
     setIsLoading(true)
-    const baseUrl = process.env.NODE_ENV === 'production'
-        ? 'https://share-space-react-sba-1.onrender.com/api/user/login'
-        : 'http://localhost:3000/api/user/login';
+    // const baseUrl = process.env.NODE_ENV === 'production'
+    //     ? 'https://share-space-react-sba-1.onrender.com/api/user/login'
+    //     : ;
 
-    const response = await fetch(baseUrl, {
+    const response = await fetch('http://localhost:3000/api/user/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({email, password})
