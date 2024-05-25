@@ -24,10 +24,7 @@ const ProductsForm = () => {
     const product = { name, description, price, category, image };
 
     try {
-      const baseUrl = process.env.NODE_ENV === 'production'
-      ? 'https://share-space-react-sba-1.onrender.com/api/products/'
-      : 'http://localhost:3000/api/products/';
-      const response = await fetch('baseUrl', {
+      const response = await fetch('http://localhost:3000/api/products/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json',
                    'Authorization': `Bearer ${user.token}`
