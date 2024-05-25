@@ -11,11 +11,11 @@ export const UseSignup = ()=>{
     setError(null)
     setIsLoading(true)
 
-    // const baseUrl = process.env.NODE_ENV === 'production'
-    //     ? 'https://share-space-react-sba-1.onrender.com/api/user/signup'
-    //     : ;
+     const BASE_URL = import.meta.env.DEV ? 
+    'http://localhost:3000/api/user/signup' : 
+    'https://share-space-react-sba-1.onrender.com/user/signup'
 
-    const response = await fetch('http://localhost:3000/api/user/signup', {
+    const response = await fetch(BASE_URL , {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({email, password, name, role})
