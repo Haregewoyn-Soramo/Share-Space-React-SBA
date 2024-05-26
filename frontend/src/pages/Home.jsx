@@ -45,6 +45,7 @@ const Home = ()=>{
       <div className="imageSlide">
         <ImageSlide products={products}/>
       </div>
+      <hr />
     </div>
   );
 }

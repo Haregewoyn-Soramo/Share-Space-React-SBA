@@ -8,6 +8,7 @@ body{
   background: #f1f1f1;
   margin: 0;
   font-family:'poppins';
+  background: black;
 }
 
 header{
@@ -20,10 +21,12 @@ header .container{
   display:flex;
   align-items: center;
   justify-content: space-between;
+  background: #333;
+  color: whitesmoke;
 }
 
 header a{
-  color: #333;
+  color: white;
   text-decoration: none;
 }
 nav ul {
@@ -159,9 +162,19 @@ input.errorState{
   border-radius: 4px;
 }
 .imageSlide{
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #333; */
+  padding: 50px;
+  margin-left: 0;
 }
+/* .imageSlide img{
+  width: 100%;
+  border: 10px;
+} */
 .home{
   display: flex;
   flex-direction: column;
