@@ -2,7 +2,7 @@ import { useState } from "react";
 import { UseProductsContext } from "../hooks/UseProductsContext"
 import { UseAuthContext } from "../hooks/UseAuthContext";
 
-const ProductsForm = () => {
+const ProductsForm = ({ onProductCreated}) => {
   
   const{dispatch} = UseProductsContext()
   const {user} = UseAuthContext()
@@ -51,6 +51,7 @@ const ProductsForm = () => {
         console.log('New product added', json);
         dispatch({type: 'CREATE_PRODUCT', payload: json})
         setEmptyFields([])
+        onProductCreated();
       }
     } catch (err) {
       setError('Failed to add product');

@@ -14,7 +14,7 @@ const NavBar = ()=>{
   return(
     <header>
       <div className="container">
-        <Link to = '/'><h1>Share Scape</h1></Link>
+        <Link to = '/view'><h1>Share Scape</h1></Link>
         <nav>
             <ul>
             <li>

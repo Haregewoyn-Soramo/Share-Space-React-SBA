@@ -1,13 +1,17 @@
 
+import { useNavigate } from "react-router-dom"
 import ProductsForm from "../components/ProductsForm"
 
 
 const CreateProduct = () =>{
-  
+  const navigate = useNavigate();
+  const handleProductCreated = () =>{
+    navigate('/')
+  }
 
   return(
     <div>
-      <ProductsForm/>
+      <ProductsForm onProductCreated={handleProductCreated}/>
     </div>
      
   )
