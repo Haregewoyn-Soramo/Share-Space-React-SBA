@@ -17,7 +17,7 @@ const Home = ()=>{
      
       const BASE_URL = import.meta.env.DEV ? 
       'http://localhost:3000/api/products/' : 
-      'https://share-space-react-sba-1.onrender.com/api/products/'
+      'https://share-space-react-sba-back.onrender.com/api/products/'
       
     const response = await fetch(BASE_URL,{
       headers:{
