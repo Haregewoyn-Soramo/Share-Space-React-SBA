@@ -17,8 +17,11 @@ const NavBar = ()=>{
         <Link to = '/'><h1>Share Scape</h1></Link>
         <nav>
             <ul>
-              <li>
-              <Link to = '/'><p>Home</p></Link>
+            <li>
+              <Link to = '/view'><p>Explore</p></Link>
+              </li>
+            <li>
+              <Link to = '/'><p>User</p></Link>
               </li>
               <li>
               <Link to = '/create'><p>Create</p></Link>

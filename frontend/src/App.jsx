@@ -7,6 +7,8 @@ import CreateProduct from './pages/CreateProduct'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import { UseAuthContext } from './hooks/UseAuthContext'
+import ViewPage from './pages/ViewPage'
+
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
         <NavBar/>
         <div className='pages'>
           <Routes>
+            <Route path='/view' element = {<ViewPage/>}></Route>
             <Route path='/Login' element = {!user ? <Login/> : <Navigate to='/'/>}></Route>
             <Route path='/Signup' element = {!user ? <Signup/>: <Navigate to = '/'/>}></Route>
             <Route path='/' element = {user ? <Home/>: <Navigate to ="/login"/>}></Route>

@@ -5,9 +5,10 @@ const router = express.Router()
 
 
 
-router.use(requireAuth)
 
 router.get('/', getProducts)
+
+router.use(requireAuth)
 
 router.get('/:id', getSingleProduct)
 
