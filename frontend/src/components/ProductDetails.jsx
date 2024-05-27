@@ -49,8 +49,8 @@ const ProductDetails = ({ products }) => {
         <div className="card" key={product._id}>
           <img src={product.image.url} alt={product.name} />
           <b>{product.name}</b>
-          {/* <p>${product.price}</p>
-          <p>{product.category}</p> */}
+           {/* <p>${product.price}</p> */}
+          <p>{product.category}</p>
           <p>{formatDistanceToNow(new Date(product.createdAt), { addSuffix: true })}</p>
           <span className="material-symbols-outlined" onClick={() => handleClick(product._id)}>delete</span>
         </div>

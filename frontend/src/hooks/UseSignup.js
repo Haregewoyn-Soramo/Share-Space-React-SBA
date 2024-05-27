@@ -13,7 +13,7 @@ export const UseSignup = ()=>{
 
      const BASE_URL = import.meta.env.DEV ? 
     'http://localhost:3000/api/user/signup' : 
-    'https://share-space-react-sba-back.onrender.com/user/signup'
+    'https://share-space-react-sba-back.onrender.com/api/user/signup'
 
     const response = await fetch(BASE_URL , {
       method: 'POST',
